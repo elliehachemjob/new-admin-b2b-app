@@ -1,6 +1,8 @@
 import React from "react";
 import { TopBar } from "./components/topbar/TopBar";
 import { SideBar } from "./components/sidebar/SideBar";
+import { Home } from "./components/pages/home/Home";
+
 import "./app.css";
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
       <TopBar />
       <div className="container">
         <SideBar />
-        <div className="others"> other pages</div>
+        <Home />
       </div>
     </div>
   );
