@@ -16,6 +16,7 @@ export const Home: React.FC<Props> = (props: any): any => {
         grid
         dataKey="Active User"
       />
+      <div className="homwWidget"></div>
     </div>
   );
 };
