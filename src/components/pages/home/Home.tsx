@@ -14,7 +14,7 @@ export const Home: React.FC<Props> = (props: any): any => {
         data={userData}
         title="User Analytics"
         grid
-        dataKey="Active Users"
+        dataKey="Active User"
       />
     </div>
   );
