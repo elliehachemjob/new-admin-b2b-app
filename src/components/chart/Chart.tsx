@@ -16,31 +16,31 @@ interface Props {}
 export const Chart: React.FC<Props> = (props: any): any => {
   const data = [
     {
-      name: "Page A",
-      "Active User": 4000,
+      name: "User one ",
+      "Active User": 1000,
     },
     {
-      name: "Page B",
+      name: "User two",
       "Active User": 3000,
     },
     {
-      name: "Page C",
+      name: "User three",
       "Active User": 2000,
     },
     {
-      name: "Page D",
+      name: "User four",
       "Active User": 2780,
     },
     {
-      name: "Page E",
+      name: "User five",
       "Active User": 1890,
     },
     {
-      name: "Page F",
+      name: "User six",
       "Active User": 2390,
     },
     {
-      name: "Page G",
+      name: "User seven",
       "Active User": 3490,
     },
   ];
@@ -52,6 +52,8 @@ export const Chart: React.FC<Props> = (props: any): any => {
         <LineChart data={data}>
           <XAxis dataKey="name" stroke="#5550bd" />
           <Line type="monotone" dataKey="Active User" stroke="#5550bd" />
+          <Tooltip />
+          <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />
         </LineChart>
       </ResponsiveContainer>
     </div>
