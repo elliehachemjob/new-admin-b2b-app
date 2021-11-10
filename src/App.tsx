@@ -1,107 +1,15 @@
 import React from "react";
 import { TopBar } from "./components/topbar/TopBar";
+import { SideBar } from "./components/sidebar/SideBar";
+import "./app.css";
 
 function App() {
   return (
     <div>
       <TopBar />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br />
-      test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br /> test
-      <br />
+      <div className="container">
+        <SideBar />
+      </div>
     </div>
   );
 }
