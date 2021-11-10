@@ -7,13 +7,13 @@ interface Props {}
 
 export const FeaturedInfo: React.FC<Props> = (props: any): any => {
   return (
-    <div className="Featured">
+    <div className="featured">
       <div className="featuredItem">
         <span className="featuredTitle">Revenue</span>
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">$2,415$</span>
           <span className="featuredMoneyRate">
-            -11.4 <ArrowDownwardIcon />
+            -11.4 <ArrowDownwardIcon className="featuredIcon negative" />
           </span>
         </div>
         <span className="featuredSub">Compare to last month</span>
