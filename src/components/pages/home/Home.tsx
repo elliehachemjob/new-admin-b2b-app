@@ -3,6 +3,8 @@ import { FeaturedInfo } from "../../featuredInfo/FeaturedInfo";
 import { Chart } from "../../chart/Chart";
 import { userData } from "../../../dummyData";
 import "./home.css";
+import { WidgetSm } from "../../widgetSm/WidgetSm";
+import { WidgetLg } from "../../widgetLg/WidgetLg";
 
 interface Props {}
 
@@ -16,7 +18,10 @@ export const Home: React.FC<Props> = (props: any): any => {
         grid
         dataKey="Active User"
       />
-      <div className="homwWidget"></div>
+      <div className="homwWidget">
+        <WidgetSm />
+        <WidgetLg />
+      </div>
     </div>
   );
 };
