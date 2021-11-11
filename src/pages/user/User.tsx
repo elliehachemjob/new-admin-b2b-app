@@ -6,6 +6,7 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import PublishIcon from "@mui/icons-material/Publish";
 
 interface Props {}
 
@@ -108,7 +109,20 @@ export const User: React.FC<Props> = (props: any): any => {
                 />
               </div>
             </div>
-            <div className="userUpdateRight"></div>
+            <div className="userUpdateRight">
+              <div className="userUpdateUpload">
+                <img
+                  src="https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc"
+                  alt=""
+                  className="userUpdateImg"
+                />
+                <label htmlFor="file">
+                  <PublishIcon className="userUpdateIcon" />
+                </label>
+                <input type="file" id="file" style={{ display: "none" }} />
+              </div>
+              <button className="userUpdateButton">Update</button>
+            </div>
           </form>
         </div>
       </div>
