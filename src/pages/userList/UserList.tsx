@@ -1,7 +1,8 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import "./userList.css";
-
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { userRows } from "../../dummyData";
 interface Props {}
 
 export const UserList: React.FC<Props> = (props: any): any => {
@@ -31,109 +32,30 @@ export const UserList: React.FC<Props> = (props: any): any => {
       headerName: "Transaction Volume ",
       width: 160,
     },
-  ];
-
-  const rows = [
     {
-      id: 1,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 2,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 3,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 4,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 5,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 6,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 7,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 8,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 9,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
-    },
-    {
-      id: 10,
-      username: "Jalal",
-      avatar:
-        "https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc",
-      email: "jalal@gmail.com",
-      status: "active",
-      transaction: "120.00$",
+      field: "action",
+      headerName: "Action ",
+      width: 150,
+      renderCell: (params: any) => {
+        return (
+          <>
+            <button className="userListEdit">Edit</button>
+            <DeleteOutlineIcon className="userListDelete" />
+          </>
+        );
+      },
     },
   ];
 
   return (
     <div className="userList">
       <DataGrid
-        rows={rows}
+        rows={userRows}
         columns={columns}
-        pageSize={5}
+        pageSize={8}
         rowsPerPageOptions={[5]}
         checkboxSelection
+        disableSelectionOnClick
       />
     </div>
   );
