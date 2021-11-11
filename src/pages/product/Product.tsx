@@ -47,13 +47,44 @@ export const Product: React.FC<Props> = (props: any): any => {
               <span className="productInfoValue">yes</span>
             </div>
             <div className="productInfoItem">
-              <span className="productInfoKey">in stock</span>
+              <span className="productInfoKey">in stock:</span>
               <span className="productInfoValue">no</span>
             </div>
           </div>
         </div>
       </div>
-      <div className="productBottom"></div>
+      <div className="productBottom">
+        <form className="productForm">
+          <div className="productFormLeft">
+            <label>Product Name</label>
+            <input type="text" className="Iphone 6" />
+            <label>In Stock</label>
+            <select name="inStock" id="idStock">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+            <label>Active</label>
+            <select name="active" id="active">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div className="productFormRight">
+            <div className="productUpload">
+              <img
+                src="https://media-exp1.licdn.com/dms/image/C560BAQHgMOc88iPV6g/company-logo_200_200/0/1578911344580?e=2159024400&v=beta&t=WfQV2bAVy28VrvjaVFELLmOHYSgYjXtMte1e0cEGpJc"
+                alt=""
+                className="productUploadImg"
+              />
+              <label htmlFor="file">
+                <Publish />
+              </label>
+              <input type="text" id="file" style={{ display: "none" }} />
+            </div>
+            <button className="productButton">Update</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
