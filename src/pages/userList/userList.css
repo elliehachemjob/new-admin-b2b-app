@@ -1,3 +1,17 @@
 .userList {
   flex: 4;
 }
+
+.userListUser {
+  display: flex;
+  align-items: center;
+}
+
+/* nice image style */
+.userListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
