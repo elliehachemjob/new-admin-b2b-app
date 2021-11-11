@@ -3,6 +3,6 @@ import "./userList.css";
 
 interface Props {}
 
-export const Home: React.FC<Props> = (props: any): any => {
+export const UserList: React.FC<Props> = (props: any): any => {
   return <div className="userList"></div>;
 };

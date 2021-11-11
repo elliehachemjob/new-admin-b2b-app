@@ -1,20 +1,24 @@
 import React from "react";
 import { TopBar } from "./components/topbar/TopBar";
 import { SideBar } from "./components/sidebar/SideBar";
-import { Home } from "./components/pages/home/Home";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Home } from "./pages/home/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { UserList } from "./pages/userList/UserList";
 
 import "./app.css";
 
 function App() {
   return (
-    <div>
+    <Router>
       <TopBar />
       <div className="container">
         <SideBar />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<UserList />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
