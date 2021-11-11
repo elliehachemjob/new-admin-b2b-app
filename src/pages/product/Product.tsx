@@ -3,6 +3,7 @@ import "./product.css";
 import { Link } from "react-router-dom";
 import { Chart } from "../../components/chart/Chart";
 import { productData } from "../../dummyData";
+import PublishIcon from "@mui/icons-material/Publish";
 
 interface Props {}
 
@@ -77,7 +78,7 @@ export const Product: React.FC<Props> = (props: any): any => {
                 className="productUploadImg"
               />
               <label htmlFor="file">
-                <Publish />
+                <PublishIcon />
               </label>
               <input type="text" id="file" style={{ display: "none" }} />
             </div>
