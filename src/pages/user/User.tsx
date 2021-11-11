@@ -55,7 +55,62 @@ export const User: React.FC<Props> = (props: any): any => {
           </div>
         </div>
 
-        <div className="userUpdate"></div>
+        <div className="userUpdate">
+          <span className="userUpdateTitle">Edit</span>
+          <form className="userUpdatForm">
+            <div className="userUpdateLeft">
+              <div className="userUpdatItem">
+                <label>Username</label>
+                <input
+                  type="text"
+                  placeholder="Jalal"
+                  className="userUpdateInput"
+                />
+              </div>
+              <div className="userUpdatItem">
+                <label>Username</label>
+                <input
+                  type="text"
+                  placeholder="Jalal"
+                  className="userUpdateInput"
+                />
+              </div>
+              <div className="userUpdatItem">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  placeholder="Jalal"
+                  className="userUpdateInput"
+                />
+              </div>
+              <div className="userUpdatItem">
+                <label>Email</label>
+                <input
+                  type="text"
+                  placeholder="Jalal"
+                  className="userUpdateInput"
+                />
+              </div>
+              <div className="userUpdatItem">
+                <label>Phone</label>
+                <input
+                  type="text"
+                  placeholder="Jalal"
+                  className="userUpdateInput"
+                />
+              </div>
+              <div className="userUpdatItem">
+                <label>Address</label>
+                <input
+                  type="text"
+                  placeholder="Jalal"
+                  className="userUpdateInput"
+                />
+              </div>
+            </div>
+            <div className="userUpdateRight"></div>
+          </form>
+        </div>
       </div>
     </div>
   );
