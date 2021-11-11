@@ -204,3 +204,18 @@ export const productRows = [
     price: "120.00$",
   },
 ];
+
+export const productData = [
+  {
+    name: "User one ",
+    Sales: 1000,
+  },
+  {
+    name: "User two",
+    Sales: 3000,
+  },
+  {
+    name: "User three",
+    Sales: 2000,
+  },
+];
