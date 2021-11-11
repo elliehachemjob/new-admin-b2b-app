@@ -1,6 +1,11 @@
 import "./user.css";
 
 import React, { useState } from "react";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 
 interface Props {}
 
@@ -19,8 +24,35 @@ export const User: React.FC<Props> = (props: any): any => {
               alt=""
               className="userShowImage"
             />
+            <div className="userShowTopTitle">
+              <span className="userShowUsername">Jalal</span>
+              <span className="userShowUseTitle">Manager</span>
+            </div>
           </div>
-          <div className="userShowBottom"></div>
+          <div className="userShowBottom">
+            <span className="userShowTitle">Account Details</span>
+            <div className="userShowInfo">
+              <PermIdentityIcon className="userShowIcon" />
+              <span className="userShowInfoTitle">Jalal</span>
+            </div>
+            <div className="userShowInfo">
+              <CalendarTodayIcon className="userShowIcon" />
+              <span className="userShowInfoTitle">4234</span>
+            </div>{" "}
+            <div className="userShowInfo">
+              <PhoneAndroidIcon className="userShowIcon" />
+              <span className="userShowInfoTitle">10.1/1990</span>
+            </div>{" "}
+            <span className="userShowTitle">Account Details</span>
+            <div className="userShowInfo">
+              <MailOutlineIcon className="userShowIcon" />
+              <span className="userShowInfoTitle">Jalal11@gmail.com</span>
+            </div>{" "}
+            <div className="userShowInfo">
+              <LocationSearchingIcon className="userShowIcon" />
+              <span className="userShowInfoTitle">Jalal11</span>
+            </div>
+          </div>
         </div>
 
         <div className="userUpdate"></div>
